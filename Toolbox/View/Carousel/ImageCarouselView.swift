@@ -26,18 +26,30 @@ struct ImageCarouselView: View {
                             let randInt = Int.random(in: 1000...9999)
                             let url = URL(string: "\(item.imageUrl)?\(randInt)")
                             VStack {
-                                WebImage(url: url)
-                                    .resizable()
-                                    .indicator(.activity)
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: geometry.size.width,
-                                           height: movie.type == "poster" ? geometry.size.height : geometry.size.height / 3,
-                                           alignment: .top)
-                                    .onTapGesture {
-                                        if item.videoUrl != nil {
-                                            isPresented.toggle()
+                                ZStack {
+                                    WebImage(url: url)
+                                        .resizable()
+                                        .indicator(.activity)
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: geometry.size.width,
+                                               height: movie.type == "poster" ?
+                                                geometry.size.height : geometry.size.height / 3)
+                                        .onTapGesture {
+                                            if item.videoUrl != nil {
+                                                isPresented.toggle()
+                                            }
                                         }
+                                    
+                                    HStack {
+                                        Text("\(movie.title)")
+                                            .font(.largeTitle)
+                                            .foregroundColor(.white)
+                                            
+                                        Spacer()
                                     }
+                                    .padding()
+                                }
+                                
                                 
                                 HStack {
                                     Spacer()

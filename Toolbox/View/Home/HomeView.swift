@@ -19,6 +19,8 @@ struct HomeView: View {
                         self.getData()
                     }
             }
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
             .edgesIgnoringSafeArea(.all)
     }
     

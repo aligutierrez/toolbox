@@ -12,10 +12,6 @@ struct RootView: View {
     @EnvironmentObject var viewModel: LoginViewModel
     
     var body: some View {
-//      HomeView()
-//        .fullScreenCover(isPresented: $viewModel.needsAuthentication) {
-//          LoginView()
-//        }
         NavigationView {
             ZStack {
                 NavigationLink(
