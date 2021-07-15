@@ -5,10 +5,8 @@ inhibit_all_warnings! # ignore warnings from dependencies
 
 def project_pods
   # Pods for Toolbox
-  pod 'SwiftLint'
   pod 'Alamofire'
   pod 'PromisedFuture', '1.0.1'
-  pod 'ReachabilitySwift'
   pod 'SDWebImageSwiftUI'
 end
 
