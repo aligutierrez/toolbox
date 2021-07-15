@@ -1,0 +1,38 @@
+PODS:
+  - Alamofire (5.4.3)
+  - PromisedFuture (1.0.1)
+  - ReachabilitySwift (5.0.0)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
+  - SDWebImageSwiftUI (2.0.2):
+    - SDWebImage (~> 5.10)
+  - SwiftLint (0.43.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - PromisedFuture (= 1.0.1)
+  - ReachabilitySwift
+  - SDWebImageSwiftUI
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - PromisedFuture
+    - ReachabilitySwift
+    - SDWebImage
+    - SDWebImageSwiftUI
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  PromisedFuture: 3f863d17c047c3474c85045b254bb1c94743ed0f
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
+  SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
+
+PODFILE CHECKSUM: 0c8b3cdf3ff0d3c6838a1eb1a6cd1b1e9eac7f3d
+
+COCOAPODS: 1.10.1
