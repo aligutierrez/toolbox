@@ -11,17 +11,27 @@ struct HomeView: View {
     @EnvironmentObject var loginViewModel: LoginViewModel
     @ObservedObject var viewModel = HomeViewViewModel()
     @State var carousel: [MoviesCarousel] = [MoviesCarousel]()
+    @State var shouldDisplayCarousel = false
     
     var body: some View {
-            VStack {
-                ImageCarouselView(moviesCarousel: carousel)
-                    .onAppear() {
-                        self.getData()
-                    }
+        VStack(alignment: .leading) {
+                if shouldDisplayCarousel {
+                    ImageCarouselView(moviesCarousel: carousel)
+                }
+                Spacer()
             }
+            .edgesIgnoringSafeArea(.all)
+            .frame(minWidth: 0,
+                   maxWidth: .infinity,
+                   minHeight: 0,
+                   maxHeight: .infinity,
+                   alignment: .topLeading)
+            .onAppear() {
+                self.getData()
+            }
+            .edgesIgnoringSafeArea(.all)
             .navigationBarTitle("")
             .navigationBarHidden(true)
-            .edgesIgnoringSafeArea(.all)
     }
     
     func getData() {
@@ -36,6 +46,7 @@ struct HomeView: View {
             
             guard let carousel = carousel else { return }
             self.carousel = carousel
+            self.shouldDisplayCarousel = true
         }
     }
 }
